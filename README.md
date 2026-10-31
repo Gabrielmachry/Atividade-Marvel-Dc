@@ -1,17 +1,26 @@
-# Atividade Semana 01 – Rotas com Node.js e Express
+# Catálogo de Heróis – Node.js e Express
 
-Aplicação simples em Node.js + Express com rotas para os universos Marvel e DC.
+Aplicação em Node.js + Express que apresenta as empresas Marvel e DC e seus personagens, retornando páginas HTML com `res.send()` e usando parâmetros de rota com `req.params`.
 
+## Como executar
 
 ```bash
 npm install
 npm start
 ```
 
-Acesse no navegador:
+O servidor sobe em http://localhost:3030.
 
-| Rota | Resposta |
-|------|----------|
-| http://localhost:3000/ | Bem-vindo ao site da Marvel e DC! |
-| http://localhost:3000/marvel | Este é o universo de heróis da Marvel. |
-| http://localhost:3000/dc | Este é o universo de heróis da DC. |
+## Rotas
+
+| Rota | Descrição |
+|------|-----------|
+| `/` | Página inicial com links para as empresas e os personagens |
+| `/marvel` | Página da Marvel com a lista de personagens |
+| `/dc` | Página da DC com a lista de personagens |
+| `/personagem/:empresa/:nome` | Página do personagem, usando os parâmetros `empresa` e `nome` |
+
+Exemplos:
+
+- http://localhost:3030/personagem/marvel/Thor
+- http://localhost:3030/personagem/dc/Batman
